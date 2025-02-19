@@ -7,6 +7,9 @@
         <h1 class="display-4">InstaClone</h1>
     </div>
     <div>
+        <button class="btn accept-policy"><a href="Post/NewPost">New Post</a></button>
+    </div>
+    <div>
         <!--Grid-->
         <div>
             @foreach (Post post in ViewBag.Posts) {
@@ -14,6 +17,10 @@
             }
         </div>
         <div>
+            @foreach (User user in ViewBag.Users)
+            {
+				<partial name="_UserTab" model="user" />
+            }
             <!--People you follow, etc-->
         </div>
     </div>
