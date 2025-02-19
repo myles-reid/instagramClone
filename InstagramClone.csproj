@@ -10,4 +10,10 @@
     <Folder Include="DatabaseStuff\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InstagramClone.BLL\InstagramClone.BLL.csproj" />
+    <ProjectReference Include="..\InstagramClone.DAL\InstagramClone.DAL.csproj" />
+    <ProjectReference Include="..\InstagramClone.Models\InstagramClone.Models.csproj" />
+  </ItemGroup>
+
 </Project>

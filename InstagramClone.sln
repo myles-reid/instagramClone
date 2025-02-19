@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramClone", "InstagramClone.csproj", "{01CB75E8-1C9F-4A31-BB87-BA256194C353}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramClone.Models", "..\InstagramClone.Models\InstagramClone.Models.csproj", "{9D2E98EE-7EB5-47DD-BE85-B9F2694C4324}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramClone.DAL", "..\InstagramClone.DAL\InstagramClone.DAL.csproj", "{8CB08ACD-4206-4D06-8FF0-6109D2270FA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstagramClone.BLL", "..\InstagramClone.BLL\InstagramClone.BLL.csproj", "{664BB945-C7D6-4F5D-B51D-1169517C2897}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{01CB75E8-1C9F-4A31-BB87-BA256194C353}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01CB75E8-1C9F-4A31-BB87-BA256194C353}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01CB75E8-1C9F-4A31-BB87-BA256194C353}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D2E98EE-7EB5-47DD-BE85-B9F2694C4324}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D2E98EE-7EB5-47DD-BE85-B9F2694C4324}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D2E98EE-7EB5-47DD-BE85-B9F2694C4324}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D2E98EE-7EB5-47DD-BE85-B9F2694C4324}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB08ACD-4206-4D06-8FF0-6109D2270FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB08ACD-4206-4D06-8FF0-6109D2270FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB08ACD-4206-4D06-8FF0-6109D2270FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB08ACD-4206-4D06-8FF0-6109D2270FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664BB945-C7D6-4F5D-B51D-1169517C2897}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664BB945-C7D6-4F5D-B51D-1169517C2897}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664BB945-C7D6-4F5D-B51D-1169517C2897}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664BB945-C7D6-4F5D-B51D-1169517C2897}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
