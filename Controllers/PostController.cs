@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using InstagramClone.Models;
+﻿using InstagramClone.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace InstagramClone.Controllers {
 	public class PostController : Controller {
@@ -18,6 +18,7 @@ namespace InstagramClone.Controllers {
 		public IActionResult NewPost(PostViewModel newPost, int userID) {
 			if (ModelState.IsValid) {
 				newPost.PostId = _nextID++;
+				newPost.Timestamp = DateTime.Now;
 				newPost.Images = AddImages(newPost);
 				newPost.TaggedUsers = AddTags(newPost);
 				return RedirectToAction("Home/Index");
@@ -25,6 +26,23 @@ namespace InstagramClone.Controllers {
 			return View(newPost);
 		}
 
+		[HttpGet]
+		public IActionResult EditPost(int postId) {
+			Post post = posts.Find(p => p.PostId == postId);
+			return View(post);
+		}
+
+		[HttpPost]
+		public IActionResult EditPost(PostViewModel post) {
+			if (ModelState.IsValid) {
+				Post oldPost = posts.Find(p => p.PostId == post.PostId);
+				oldPost.Images = AddImages(post);
+				oldPost.Timestamp = DateTime.Now;
+				oldPost.TaggedUsers = AddTags(post);
+				return RedirectToAction("Home/Index");
+			}
+			return View(post);
+		}
 		private List<string> AddImages(PostViewModel post) {
 			List<string> images = new List<string>();
 			if (post.ImageInput == null) {
@@ -38,6 +56,7 @@ namespace InstagramClone.Controllers {
 			return images;
 		}
 
+		// This needs to be updated to get UserID instead of Username
 		private List<string> AddTags(PostViewModel post) {
 			List<string> tags = new List<string>();
 			if (post.TaggedUsersInput == null) {
