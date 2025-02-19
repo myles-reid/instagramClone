@@ -1,7 +1,7 @@
 ﻿namespace InstagramClone.Models {
 	public class Post {
 		public int PostId { get; set; }
-		public string[] Images { get; set; }
+		public List<string> Images { get; set; }
 		public DateTime Timestamp { get; set; }
 		public string Caption { get; set; }
 		public int TotalLikes { get; set; }
